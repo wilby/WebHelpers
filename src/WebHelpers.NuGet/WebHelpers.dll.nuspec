@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>WebHelpers</id>
+	<title>WebHelpers .Net Html Helper Utilities</title>
+    <version>4.0.2</version>
+    <authors>Wilby C. Jackson Jr.</authors>
+    <owners>Wilby C. Jackson Jr.</owners>
+    <licenseUrl>http://opensource.org/licenses/mit-license.php</licenseUrl>
+    <projectUrl>https://github.com/wilby/WebHelpers</projectUrl>    
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+		Web/Html Helper Class Library. Markdown Parser / Html Santizer		
+	</description>
+	<summary>
+		Need a markdown parser or Html Santizer that doesn't strip every tag / attribute but still protects from xss and normalization of html? 
+		StackExchange has done that for us at http://code.google.com/p/stack-exchange-data-explorer/, I just made it easy to utilize in other projects.
+		
+		Starting with StackExchange.DataExplorer.Helpers.HtmlUtilities which contains methods for converting Markdown to Html and Sanitizing Html
+		
+		Example:
+		HtmlUtilities.Safe(HtmlUtilites.RawToCooked(markdownCode))				
+	</summary>
+    <releaseNotes>
+		-Removed dll from lib and added it as a reference.
+		-Added .Net 4.5 target framework
+	</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>WebHelpers Sanitize Markdown Parser Html</tags>
+    <dependencies>
+		<group targetFramework="net40">
+			<dependency id="MarkdownSharp" version="1.13.0"/>			
+		</group>
+    </dependencies>
+  </metadata>
+  <files>
+	<file src="WebHelpers\bin\Release\WebHelpers.dll" target="lib\net40" />
+	<file src="WebHelpers\bin\Release\WebHelpers.dll" target="lib\net45" />
+  </files>
+</package>
